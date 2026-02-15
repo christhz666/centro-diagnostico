@@ -11,6 +11,7 @@ def create_app(config_name=None):
         config_name = os.getenv('FLASK_ENV', 'production')
 
     app = Flask(__name__)
+    app.json.ensure_ascii = False
     app.config.from_object(config[config_name])
 
     from app import db, migrate, jwt
@@ -113,6 +114,7 @@ def create_app(config_name=None):
         'app.routes.whatsapp': ('whatsapp', '/api/whatsapp'),
         'app.routes.busqueda': ('busqueda', '/api/busqueda'),
         'app.routes.configuracion': ('configuracion', '/api/config'),
+        'app.routes.notificaciones': ('notificaciones', '/api/notificaciones'),
         'app.routes.admin_usuarios': ('admin_usuarios', '/api/admin'),
     }
 

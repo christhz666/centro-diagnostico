@@ -97,3 +97,24 @@ config = {
     'testing': TestingConfig,
     'default': ProductionConfig  # CAMBIADO: default es producción
 }
+
+# Parche UTF-8
+class ConfigUtf8(Config):
+    JSON_AS_ASCII = False
+    RESTFUL_JSON = {'ensure_ascii': False}
+
+# Aplicar parche a las configuraciones existentes
+DevelopmentConfig.JSON_AS_ASCII = False
+ProductionConfig.JSON_AS_ASCII = False
+
+# Parche forzado de codificación
+class ConfigUtf8Fix(Config):
+    JSON_AS_ASCII = False
+    SQLALCHEMY_ENGINE_OPTIONS = {
+        'client_encoding': 'utf8',
+        'connect_args': {'client_encoding': 'utf8'}
+    }
+
+# Aplicar a Production
+ProductionConfig.SQLALCHEMY_ENGINE_OPTIONS = ConfigUtf8Fix.SQLALCHEMY_ENGINE_OPTIONS
+ProductionConfig.JSON_AS_ASCII = False
