@@ -111,6 +111,9 @@ def create_app(config_name=None):
         'app.routes.portal_paciente': ('portal_paciente', '/api/portal'),
         'app.routes.portal_medico': ('portal_medico', '/api/medico'),
         'app.routes.whatsapp': ('whatsapp', '/api/whatsapp'),
+        'app.routes.busqueda': ('busqueda', '/api/busqueda'),
+        'app.routes.configuracion': ('configuracion', '/api/config'),
+        'app.routes.admin_usuarios': ('admin_usuarios', '/api/admin'),
     }
 
     for module_path, (bp_name, url_prefix) in blueprints.items():
