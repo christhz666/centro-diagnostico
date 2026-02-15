@@ -1,24 +1,88 @@
+# ===============================
+# SEGURIDAD - NUNCA subir esto
+# ===============================
+.env
+.env.*
+*.env
+!.env.example
+*id_rsa*
+*id_ed25519*
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+
+# ===============================
+# Python
+# ===============================
 backend/venv/
-backend/__pycache__/
-backend/app/__pycache__/
+backend/**/__pycache__/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.env
-.env.local
-.env.*.local
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ===============================
+# Node.js
+# ===============================
 node_modules/
 frontend/node_modules/
-frontend/dist/
 frontend/build/
+frontend/dist/
+frontend/.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===============================
+# Archivos de datos
+# ===============================
+*.sqlite3
+*.db
+*.sql.gz
+*.dump
+backups/*.sql
+
+# ===============================
+# Uploads y archivos generados
+# ===============================
+backend/uploads/
+uploads/
 *.log
 *.tar.gz
 *.zip
-*.sqlite3
-backend/uploads/
-uploads/
+
+# ===============================
+# IDE y OS
+# ===============================
 .DS_Store
+Thumbs.db
 .idea/
 .vscode/
 *.swp
+*.swo
+*~
+
+# ===============================
+# Aider (AI assistant)
+# ===============================
+.aider*
+
+# ===============================
+# Temporal
+# ===============================
+/tmp/
+*.tmp
+*.bak
+*.backup
+
+# ===============================
+# Backups locales
+# ===============================
+*-backup-*/
