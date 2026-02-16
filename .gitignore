@@ -1,88 +1,58 @@
-# ===============================
-# SEGURIDAD - NUNCA subir esto
-# ===============================
-.env
-.env.*
-*.env
-!.env.example
-*id_rsa*
-*id_ed25519*
-*.pem
-*.key
-*.crt
-secrets/
-credentials/
-
-# ===============================
 # Python
-# ===============================
-backend/venv/
-backend/**/__pycache__/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
+venv/
+env/
 *.egg-info/
 dist/
 build/
-*.egg
 
-# ===============================
-# Node.js
-# ===============================
+# Node
 node_modules/
-frontend/node_modules/
-frontend/build/
-frontend/dist/
-frontend/.env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# ===============================
-# Archivos de datos
-# ===============================
-*.sqlite3
-*.db
-*.sql.gz
-*.dump
-backups/*.sql
-
-# ===============================
-# Uploads y archivos generados
-# ===============================
-backend/uploads/
-uploads/
-*.log
-*.tar.gz
-*.zip
-
-# ===============================
-# IDE y OS
-# ===============================
+.pnp/
+.pnp.js
+build/
 .DS_Store
-Thumbs.db
-.idea/
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs
 .vscode/
+.idea/
 *.swp
 *.swo
 *~
 
-# ===============================
-# Aider (AI assistant)
-# ===============================
-.aider*
+# Logs
+*.log
+logs/
 
-# ===============================
-# Temporal
-# ===============================
-/tmp/
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+*.sql.gz
+
+# Backups
+backups/
+*.tar.gz
+*.zip
+
+# Temporary
+tmp/
+temp/
 *.tmp
-*.bak
-*.backup
-
-# ===============================
-# Backups locales
-# ===============================
-*-backup-*/
